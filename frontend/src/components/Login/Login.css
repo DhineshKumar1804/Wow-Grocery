@@ -1,0 +1,133 @@
+/* Main container styling */
+.login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f0f0f0; /* Plain light gray background */
+    padding: 20px;
+}
+
+.login h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Animated text moving from left to right */
+.login .animated-text {
+    font-size: 1.5em;
+    color: #FF5733;
+    margin-bottom: 30px;
+    white-space: nowrap;
+    animation: slideRight 8s linear infinite;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes slideRight {
+    0% {
+        transform: translateX(-100%);
+    }
+    50% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+/* Login container for aligning user and admin sections */
+.login .login-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 80%;
+    max-width: 1000px;
+    padding: 20px;
+}
+
+.login .user-login,
+.login .admin-login {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Scoped input and button styling within the .login component */
+.login input[type="text"],
+.login input[type="email"],
+.login input[type="password"],
+.login input[type="submit"],
+.login button {
+    margin-bottom: 20px;
+    padding: 15px;
+    font-size: 18px;
+    width: 100%;
+    border: none;
+    border-radius: 30px;
+    background-color: #f3f3f3;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.login input[type="text"]:focus,
+.login input[type="email"]:focus,
+.login input[type="password"]:focus {
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.2), 0 0 10px rgba(0, 123, 255, 0.5);
+}
+
+.login input[type="submit"],
+.login button {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-size: 1.2em;
+    text-transform: uppercase;
+}
+
+.login input[type="submit"]:hover,
+.login button:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+}
+
+.login input[type="submit"]:active,
+.login button:active {
+    background-color: #39943e;
+    transform: translateY(0);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .login .login-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .login .user-login,
+    .login .admin-login {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+.login .user-login,
+.login .admin-login {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Add margin to create space between the two sections */
+.login .user-login {
+    margin-right: 20px; /* Creates a gap between user and admin login */
+}

@@ -1,0 +1,28 @@
+.butt{
+  display: flex;
+  justify-content: flex-end; /* Aligns items to the right */
+  background-color: #333;
+  padding: 10px;
+}
+
+.but {
+  background-color: #4CAF50; /* Green background */
+  color: white; /* White text */
+  border: none;
+  padding: 10px 20px;
+  margin-left: 10px; /* Spacing between buttons */
+  cursor: pointer;
+  font-size: 16px;
+  text-transform: uppercase;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.but a {
+  color: white;
+  text-decoration: none;
+}
+
+.but:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
